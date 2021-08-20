@@ -45,8 +45,8 @@ You will notice that a few things required for proper execution are missing. Be 
 
 This time return the command you used to start process and the command(s) you used to fix the ensuing problems.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.04/1.04_content.png)
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.04/1.04_command.png)
+Commands:![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.04/1.04_command.png)
+Takes input:![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.04/1.04_content.png)
 
 ### Exercise 1.5
 #### Task
