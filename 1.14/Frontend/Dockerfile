@@ -1,6 +1,10 @@
+#Edited frontend file (Exercise 1.14)
+
 FROM node:alpine
 
 EXPOSE 5000
+
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
 
 WORKDIR /usr/src/app
 
