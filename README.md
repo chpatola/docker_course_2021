@@ -99,6 +99,7 @@ Run the new curler image with the correct flags and input helsinki.fi into it. O
 Return both Dockerfile and the command you used to run the container.
 #### Answers
 ![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.08/1.08_command.png)
+
 ![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.08/Dockerfile)
 
 ### Exercise 1.9

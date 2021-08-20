@@ -1,0 +1,9 @@
+version: '3.5' 
+
+services: 
+
+    simple-web-service: 
+      image: devopsdockeruh/simple-web-service 
+      build: . 
+      volumes: 
+        - ${PWD}/logs/text.log:/usr/src/app/text.log
