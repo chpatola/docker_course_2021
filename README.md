@@ -14,7 +14,7 @@ Stop 2 of the containers leaving 1 up.
 
 Submit the output for docker ps -a which shows 2 stopped containers and one running.
 #### Answer
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.01/1.01.png?raw=true)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.01/1.01.png?raw=true)
 
 ### Exercise 1.2
 #### Task
@@ -24,8 +24,8 @@ Clean the docker daemon from all images and containers.
 
 Submit the output for docker ps -a and docker images
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.02/1.02_images.png?raw=true)
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.02/1.02_containers.png?raw=true)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.02/1.02_images.png?raw=true)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.02/1.02_containers.png?raw=true)
 
 ### Exercise 1.3
 #### Task
@@ -33,9 +33,9 @@ Image devopsdockeruh/simple-web-service:ubuntu will start a container that outpu
 
 Submit the secret message and command(s) given as your answer.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.03/1.03_attach_to_container.png)
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.03/1.03_pull_image.png)
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.03/1.03_start_container.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.03/1.03_attach_to_container.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.03/1.03_pull_image.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.03/1.03_start_container.png)
 
 ### Exercise 1.4
 #### Task
@@ -45,8 +45,8 @@ You will notice that a few things required for proper execution are missing. Be 
 
 This time return the command you used to start process and the command(s) you used to fix the ensuing problems.
 #### Answers
-Commands:![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.04/1.04_command.png)
-Takes input:![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.04/1.04_content.png)
+Commands:![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.04/1.04_command.png)
+Takes input:![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.04/1.04_content.png)
 
 ### Exercise 1.5
 #### Task
@@ -56,8 +56,8 @@ Here is the same application but instead of ubuntu is using alpine: devopsdocker
 
 Pull both images and compare the image sizes. Go inside the alpine container and make sure the secret message functionality is the same. Alpine version doesn’t have bash but it has sh.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.05/1.05_images_sizes.png)
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.05/1.05_message.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.05/1.05_images_sizes.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.05/1.05_message.png)
 
 ### Exercise 1.6
 #### Task
@@ -69,7 +69,7 @@ Read the Dockerfile and/or docs to learn what input will get the application to 
 
 Submit the secret message and command(s) given to get it as your answer.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.06/1.06.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.06/1.06.png)
 
 ### Exercise 1.7
 #### Task
@@ -85,8 +85,8 @@ In this exercise create a Dockerfile and use FROM and CMD to create a brand new 
 
 Return the Dockerfile and the command you used to run the container.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.07/1.07_commands.png)
-![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/1.07/Dockerfile)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.07/1.07_commands.png)
+![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.07/Dockerfile)
 
 ### Exercise 1.8
 #### Task
@@ -98,8 +98,8 @@ Run the new curler image with the correct flags and input helsinki.fi into it. O
 
 Return both Dockerfile and the command you used to run the container.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.08/1.08_command.png)
-![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/1.08/Dockerfile)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.08/1.08_command.png)
+![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.08/Dockerfile)
 
 ### Exercise 1.9
 #### Task
@@ -107,8 +107,8 @@ Image devopsdockeruh/simple-web-service creates a timestamp every two seconds to
 
 Submit the command you used to complete the exercise.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.09/1.09_set_up_local.png)
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.09/1.09_container_command.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.09/1.09_set_up_local.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.09/1.09_container_command.png)
 
 ### Exercise 1.10
 #### Task
@@ -116,8 +116,8 @@ Image devopsdockeruh/simple-web-service will start a web service in port 8080 wh
 
 Submit your used commands for this exercise.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.10/1.10_commands_start_container.png)
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.10/1.10_connected_to_localhost.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.10/1.10_commands_start_container.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.10/1.10_connected_to_localhost.png)
 
 ### Exercise 1.11
 #### Task
@@ -129,24 +129,24 @@ Use openjdk image FROM openjdk:_tag_ to get java instead of installing it manual
 
 You’ve completed the exercise when you see a ‘Success’ message in your browser.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.11/1.11_run_command.png)
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.11/1.11_html_output.png)
-![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/1.11/Dockerfile)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.11/1.11_run_command.png)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.11/1.11_html_output.png)
+![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.11/Dockerfile)
 
 ### Exercise 1.12
 #### Task
-Clone, fork or download the project from https://github.com/docker-hy/material-applications/tree/main/example-frontend.
+Clone, fork or download the project from https://github.com/docker-hy/material-applications/tree/main/part1/example-frontend.
 
 Create a Dockerfile for the project (example-frontend) and give a command so that the project runs in a docker container with port 5000 exposed and published so when you start the container and navigate to http://localhost:5000 you will see message if you’re successful.
 
 Submit the Dockerfile.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.12/1.12_commands_run.png)
-![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/1.12/Dockerfile)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.12/1.12_commands_run.png)
+![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.12/Dockerfile)
 
 ### Exercise 1.13
 #### Task
-Clone, fork or download a project from https://github.com/docker-hy/material-applications/tree/main/example-backend.
+Clone, fork or download a project from https://github.com/docker-hy/material-applications/tree/main/part1/example-backend.
 
 Create a Dockerfile for the project (example-backend) and give a command so that the project runs in a docker container with port 8080 published.
 
@@ -154,8 +154,8 @@ When you start the container and navigate to http://localhost:8080/ping you shou
 
 Submit the Dockerfile and the command used.
 #### Answers
-![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/1.13/1.13_commands.png)
-![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/1.13/Dockerfile)
+![screenshot](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.13/1.13_commands.png)
+![dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/part1/1.13/Dockerfile)
 
 ### Exercise 1.14
 #### Task
@@ -167,8 +167,8 @@ You know that the configuration is ready when the button for 1.14 of frontend-ex
 
 Submit the edited Dockerfiles and commands used to run.
 #### Answers
-![Backend data](https://github.com/chpatola/docker_course_2021/tree/main/1.14/Backend)
-![Frontend data](https://github.com/chpatola/docker_course_2021/tree/main/1.14/Frontend)
+![Backend data](https://github.com/chpatola/docker_course_2021/tree/main/part1/1.14/Backend)
+![Frontend data](https://github.com/chpatola/docker_course_2021/tree/main/part1/1.14/Frontend)
 
 ### Exercise 1.15
 #### Task
