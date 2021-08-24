@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+
+ train:
+  image: 2_7_training
+  container_name: train
+  volumes:
+      - images:/src/imgs
+      - data:/src/data
+      - model:/src/model
+
+ backend:
+  image: 2_7_backend 
+  ports:
+  - 5000:5000
+  depends_on: 
+    - train
+  volumes:
+      - model:/src/model
+  container_name: backend
+
+ frontend:
+  image: 2_7_frontend 
+  ports:
+  - 3000:3000
+  container_name: frontend 
+
+volumes:
+  images:
+  data:
+  model:
+
+
