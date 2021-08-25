@@ -1,8 +1,11 @@
 # Docker course 2021
 Repo for the course <a href="https://devopswithdocker.com/" target="_blank">DevOps with Docker at University of Helsinki</a>
 
-Note: As I do not have sudo rights to my university computer, I did the exercises on an azure virtual machine.
+Note 1: More files and/or screenshots than listed in the Readme may be available in the corresponding folders
 
+Note 2: As I do not have sudo rights to my university computer, I did the exercises on an azure virtual machine.
+
+## PART 1
 
 ### Exercise 1.1
 #### Task
@@ -192,3 +195,140 @@ Then push the image to heroku with docker push registry.heroku.com/_app_/web and
 For this exercise return the url in which the released application is.
 #### Answers
 Link to app:https://hkiunidocker.herokuapp.com/
+
+## PART 2
+
+### Exercise 2.1
+#### Task
+Create a docker-compose.yml file that starts devopsdockeruh/simple-web-service and saves the logs into your filesystem.
+
+Submit the docker-compose.yml, make sure that it works simply by running docker-compose up if the log file exists.
+#### Answers
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.01/docker-compose.yml)
+
+### Exercise 2.2
+#### Task
+The familiar image devopsdockeruh/simple-web-service can be used to start a web service.
+
+Create a docker-compose.yml and use it to start the service so that you can use it with your browser.
+
+Submit the docker-compose.yml, make sure that it works simply by running docker-compose up
+#### Answers
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.02/docker-compose.yml)
+
+### Exercise 2.3
+#### Task
+In the previous part we created Dockerfiles for both frontend and backend. Next, simplify the usage into one docker-compose.yml.
+
+Configure the backend and frontend from part 1 to work in docker-compose.
+
+Submit the docker-compose.yml
+#### Answers
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.03/docker-compose.yaml)
+
+### Exercise 2.4
+#### Task
+Add redis to example backend.
+
+Redis is used to speed up some operations. Backend uses a slow api to get information. You can test the slow api by requesting /ping?redis=true with curl. The frontend program has a button to test this.
+
+Configure a redis container to cache information for the backend. Use the documentation if needed when configuring: https://hub.docker.com/_/redis/
+
+Submit the docker-compose.yml
+#### Answers
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.04/docker-compose.yaml)
+
+### Exercise 2.5
+#### Task
+A project over at https://github.com/docker-hy/material-applications/tree/main/scaling-exercise has a hardly working application. Go ahead and clone it for yourself. The project already includes docker-compose.yml so you can start it by running docker-compose up.
+
+Application should be accessible through http://localhost:3000. However it doesn’t work well enough and I’ve added a load balancer for scaling. Your task is to scale the compute containers so that the button in the application turns green.
+
+Please return the used commands for this exercise.
+#### Answers
+![command](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.05/2.5_command.png)
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.05/docker-compose.yaml)
+
+### Exercise 2.6
+#### Task
+Add database to example backend.
+
+Lets use a postgres database to save messages. We won’t need to configure a volume since the official postgres image sets a default volume for us. Lets use the postgres image documentation to our advantage when configuring: https://hub.docker.com/_/postgres/. Especially part Environment Variables is of interest.
+
+Submit the docker-compose.yml
+#### Answers
+![Dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.06/Dockerfile)
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.06/docker-compose.yaml)
+
+### Exercise 2.7
+#### Task
+Configure a machine learning project.
+
+Look into machine learning project created with Python and React and split into three parts: frontend, backend and training
+
+Note that the training requires 2 volumes and backend should share volume /src/model with training.
+
+The frontend will display on http://localhost:3000 and the application will tell if the subject of an image looks more like a cucumber or a moped.
+
+Submit the docker-compose.yml
+#### Answers
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.07/docker-compose.yaml)
+
+### Exercise 2.8
+#### Task
+Add nginx to example frontend + backend.
+At the end you should see that the frontend is accessible simply by going to http://localhost and the button works. Other buttons may have stopped working, do not worry about them.
+
+...
+
+Submit the docker-compose.yml
+#### Answers
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.08/docker-compose.yaml)
+
+### Exercise 2.9
+#### Task
+Postgres image uses a volume by default. Manually define volumes for the database in convenient location such as in ./database . Use the image documentations (postgres) to help you with the task. You may do the same for redis as well.
+
+After you have configured the volume:
+
+Save a few messages through the frontend
+Run docker-compose down
+Run docker-compose up and see that the messages are available after refreshing browser
+Run docker-compose down and delete the volume folder manually
+Run docker-compose up and the data should be gone
+Maybe it would be simpler to back them up now that you know where they are.
+
+Submit the docker-compose.yml
+#### Answers
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.09/docker-compose.yaml)
+
+### Exercise 2.10
+#### Task
+Some buttons may have stopped working in the frontend + backend project. Make sure that every button for exercises works.
+
+This may need a peek into the browsers developer consoles again like back part 1. The buttons of nginx exercise and the first button behave differently but you want them to match.
+
+If you had to do any changes explain what you had to change.
+
+Submit the docker-compose yml and both dockerfiles.
+#### Answers
+Explanation: 
+In order to get all buttons of the app to function, I did this:
+
+0. Started the app version from exercise 2.8 and looked at the information in the browser's developer tool's network tab.
+   I saw that the 2.8 button - that worked - sent requests to another backend url than the buttons that did not work
+1. Change REACT_APP_BACKEND_URL in frontend docker file to http://localhost/api 
+2. Build the frontend again
+3. Create a new docker-compose.yaml based on the ones used for exercises 2.8 and 2.9 + substitute front2 image for front3
+
+
+![docker-compose](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.10/docker-compose.yaml)
+![Backend-dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.10/backend/Dockerfile)
+![Frontend-dockerfile](https://github.com/chpatola/docker_course_2021/blob/main/part2/2.10/frontend/Dockerfile)
+
+### Exercise 2.11
+#### Task
+Select a project that you already have and start utilizing containers in the development environment.
+
+Explain what you have done. It can be anything, ranging from having supporting docker-compose.yml to have services containerized to developing inside a container.
+#### Answers
