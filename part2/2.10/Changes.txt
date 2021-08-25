@@ -1,5 +1,7 @@
 In order to get all buttons of the app to function, I did this:
 
+0. Started the app version from exercise 2.8 and looked at the information in the browser's developer tool's network tab.
+   I saw that the 2.8 button - that worked - sent requests to another backend url than the buttons that did not work
 1. Change REACT_APP_BACKEND_URL in frontend docker file to http://localhost/api 
 2. Build the frontend again
 3. Create a new docker-compose.yaml based on the ones used for exercises 2.8 and 2.9 + substitute front2 image for front3
