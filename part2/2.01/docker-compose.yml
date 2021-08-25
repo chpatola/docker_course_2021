@@ -1,12 +1,9 @@
-version: '3.8'
+version: '3.5'
 
 services:
- backend:
-  image: backend2 #I have the image locally
-  ports:
-  - 8080:8080
 
- frontend:
-  image: front2 #I have the image locally
-  ports:
-  - 5000:5000
+    simple-web-service:
+      image: devopsdockeruh/simple-web-service
+      build: .
+      volumes:
+        - ${PWD}/logs/text.log:/usr/src/app/text.log
