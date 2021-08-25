@@ -332,3 +332,6 @@ Select a project that you already have and start utilizing containers in the dev
 
 Explain what you have done. It can be anything, ranging from having supporting docker-compose.yml to have services containerized to developing inside a container.
 #### Answers
+As I cannot use Docker on my Uni computer, I find it very tricky to utilize it for development in my own, personal projects. 
+
+At my work computer, I do not have sudo rights either but due to that, I have a virtualization environment where I do most of the development. There has been a little talk about the possibility to utilize Docker for development projects that more than one person is involved in or for larger projects. Currently, our team mostly work in R and do not publish apps or API:s. However, it might be something we start doing more in the future. When I am back from my study leave, I will look into if Docker could be utilized in any of our current projects. 
