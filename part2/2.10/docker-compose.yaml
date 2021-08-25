@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13.2-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: postgres_password
+      POSTGRES_DB: postgres
+    container_name: db
+    volumes:
+      - database:/var/lib/postgresql/data
+
+  backend:
+    image: backend3 #I have the image locally
+    ports:
+      - 8080:8080
+    depends_on: 
+      - db
+    container_name: backend
+
+  frontend:
+    image: front3 #I have the image locally
+    ports:
+      - 5000
+    container_name: frontend
+
+  redis:
+    image: redis
+    container_name: redis
+    expose:
+      - 6379
+
+  proxy:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    expose:
+      - 80
+    ports:
+
+volumes:
+  database:

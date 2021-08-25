@@ -1,0 +1,5 @@
+In order to get all buttons of the app to function, I did this:
+
+1. Change REACT_APP_BACKEND_URL in frontend docker file to http://localhost/api 
+2. Build the frontend again
+3. Create a new docker-compose.yaml based on the ones used for exercises 2.8 and 2.9 + substitute front2 image for front3
